@@ -1,0 +1,146 @@
+:root{
+--bg-top: #EAFBF4;
+--bg-bottom: #F3E9FF;
+--card-bg: #FFFFFF;
+--muted: #7B8A92;
+--accent: #7FD3C7;
+--accent-2: #CDB8FF;
+--radius: 12px;
+}
+
+body{
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #123;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+.app{
+    background: var(--card-bg);
+    padding: 30px 40px;
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width:420px;
+    backdrop-filter: blur(4px);
+}
+
+.app h1{
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #333333;
+}
+
+.input-area{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-area input{
+    flex:1;
+    padding: 12px 15px;
+    border-radius: var(--radius);
+    border: 1px solid #D1D5DB;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-area input:focus{
+    border-color: var(--accent);
+    box-shadow:0 0 5px rgba(127,211,199,0.4);
+}
+
+.input-area button{
+    padding: 12px 20px;
+    background-color: var(--accent);
+    border: none;
+    border-radius: var(--radius);
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.input-area button:hover{
+    background-color: var(--accent-2);
+    transform: scale(1.05);
+}
+
+#taskList{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#taskList li{
+    background-color: var(--card-bg);
+    padding:14px 18px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+#taskList li:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.completed{
+    text-decoration: line-through;
+    color: #A0A0A0;
+    opacity: 0.7;
+}
+
+.comptlete-btn{
+    background-color: var(--accent);
+    border: none;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.complete-btn:hover{
+    background-color: var(--accent-2);
+    transform: scale(1.1);
+}
+
+.task-text{
+    color: #333333;
+    transition: color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.task-text.completed{
+  color: #3CB371; 
+}
+
+.task-text.completed::after{
+  content: " ✓"; 
+  margin-left: 8px;
+  font-weight: bold;
+  color: #3CB371;
+  text-decoration: none;
+}
