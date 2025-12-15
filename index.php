@@ -6,7 +6,6 @@ if( $stmt === false){
     die(print_r(sqlsrv_errors(), true));
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +20,6 @@ if( $stmt === false){
         <input type="text" name="task_text" placeholder="Görev gir..." required>
         <button type="submit">Ekle</button>
     </form>
-
-
-<!--     <h1>Yapılacaklar</h1>
-    <input id="taskInput" type="text" placeholder="Görev Ekle...">
-    <button id="addBtn">Ekle</button>
-    <ul id="taskList"></ul> -->
-
     <div class="app">
         <h1>Yapılacaklar</h1>
         <div class="input-area">
@@ -60,17 +52,9 @@ if( $stmt === false){
                 </li>
                 ';
 }
-
-         
             ?>
         </ul>
     </div>
-
-
-
-
-
     <script src="app.js"></script>
 </body>
 </html>   
-
